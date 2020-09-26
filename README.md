@@ -1,10 +1,42 @@
 생활코딩 web2 CSS (html+css)
 
-강의: WEB2 CSS-3.CSS의 등장
+강의: WEB2 CSS-4.CSS의 기본 문법
 
 
 
 배운내용: 
+
+HTML에 CSS를 적용하는 방법
+1. style 속성 사용
+<a href="2.html" style="color:red;text-decoration:underline">CSS</a>
+style은 href 태그의 속성으로 사용됐다. 속성으로 사용되면 선택자가 필요없다.
+
+2. style 태그 사용
+<style>
+    a {
+      color:black;
+      text-decoration: none;
+    }
+</style>  
+
+3. 용어
+선언,효과(declaration) : color:black; text-decoration:none; 
+;은 description 구분하기위해 사용
+a{선언} : 선택자(selector) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 CSS의 특징
 1. html 이 정보에 전념하게 하기 위해서, html로부터 디자인의 기능을 빼온 것
