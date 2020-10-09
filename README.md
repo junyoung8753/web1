@@ -57,3 +57,22 @@ id(#) > class > element(태그)
 id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
 
 ------------------------------------------------------------------------
+CSS-8.박스모델
+
+* CSS박스모델: border, padding, margin, width, height
+* 브라우저에서 우클릭 -> inspect(검사) 하여 CSS 박스모델이 어떻게 사용됐는지 파악할 수 있다.
+* 용어 헷갈리면 구글 이미지검색등에 CSS box model 등을 치면 나온다.
+  block: block level element (주변화면 전체를 사용)
+  inline: 부피만큼만 사용한다
+  
+      <style>
+        h1{
+            border:5px solid red;         /border으로 묶어 중복 제거/
+            padding:20px;          
+            margin:20px;
+            display:block;              /inline, block 등 으로 변경할 수 있다./
+            width:100px   
+        }
+    </style>
+
+------------------------------------------------------------------------
