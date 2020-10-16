@@ -20,19 +20,35 @@
         padding-bottom: 25px;
         padding-top: 20px;
       }
-      #grid ol {
+      ol {
         border-right: 1px solid gray;
         width: 90px;
         margin: 0px;
-        padding: 20px;
-        padding-left: 28px;
       }
       #grid {
         display: grid;
         grid-template-columns: 150px 1fr;
       }
+      #grid ol {
+
+        padding: 20px;
+        padding-left: 28px;
+      }
+
       #grid #article{
         padding-left: 42px;
+      }
+      @media(max-width:800px){
+        #grid {
+        display: block;
+        }
+        ol {
+        border-right: none;
+        }
+        h1 {
+border-bottom: none;
+        }
+        
       }
     </style>
   </head>

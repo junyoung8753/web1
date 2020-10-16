@@ -44,14 +44,17 @@ HTML에 CSS를 적용하는 방법
 <style>
 - div {color: red; padding:5px;}
 
-  <style> : style태그  
-  div : 선택자 div태그
-  { } : 선언블록
-  color:red; : 선언,효과(declaration)
-  color : 속성
-  red : 속성값
- * ( ; 는 description 구분하기위해 사용)
- * 선택자(selector)는 { 가 나오기 전 전부를 선택자라 부른다.
+  </style> : style태그
+
+div : 선택자 div태그
+{ } : 선언블록
+color:red; : 선언,효과(declaration)
+color : 속성
+red : 속성값
+
+- ( ; 는 description 구분하기위해 사용)
+- 선택자(selector)는 { 가 나오기 전 전부를 선택자라 부른다.
+
 ---
 
 # CSS-6.CSS 속성을 스스로 알아내기
@@ -70,9 +73,10 @@ id(#grid) > class(.saw) > element(div)
 구체적 > 중간 > 포괄적 순서이다
 id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
 
-- <예시 코드>
+-예시 코드
+
 <head>
-  <style>
+  <>
     div {
       color:black;
     }
@@ -82,7 +86,7 @@ id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
     .saw {
       color: gray
     }
-  </style>
+  </>
 </head>
 <body>
     <div href="1.html" class="saw">HTML</div>
@@ -98,12 +102,14 @@ id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
 - CSS박스모델: border, padding, margin, width, height
 - 브라우저에서 우클릭 -> inspect(검사) 하여 CSS 박스모델이 어떻게 사용됐는지 파악할 수 있다.
 - 용어 헷갈리면 구글 이미지검색등에 CSS box model 등을 치면 나온다.
+
   block: block level element (주변화면 전체를 사용)
   inline: 부피만큼만 사용한다
   none: 없는것으로 간주
   hidden:화면에서 감춰짐
+
 - <예시 코드>
-  <style>
+  <>
   h1{
   font-size: 45px;
   text-align: center;
@@ -113,7 +119,7 @@ id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
   display:block; /inline, block 등 으로 변경할 수 있다./
   width:100px  
    }
-  </style>
+  </>
 
 ---
 
@@ -136,12 +142,12 @@ caniuse.com 을 통해 사용가능한 코드들을 확인할 수 있다.
 - grid 사용 예시
 
   <head>
-    <style>
+    <>
       #grid{
           display:grid;
           grid-template-columns: 2fr 1fr 1fr (2:1:1비율)
           }
-    </style>
+    </>
   </head>
 
   <body>
@@ -170,5 +176,23 @@ grid-template-columns: 10px 1fr
 
 800px 보다 크다면 { } 를 동작시킨다
 { } 안에 div{} 가 있으므로 800px보다 클때 화면을 안보이게 만든다.
-min: ~~부터
-max: ~~까지
+min: 최소~~부터
+max: 최대~~까지
+최대100까지는 0~100 까지.
+
+---
+
+# CSS-13.미디어 쿼리 써먹기
+
+@media(max-width:800px){
+#grid {
+display: block;
+}
+ol {
+border-right: none;
+}
+h1 {
+border-bottom: none;
+}
+}
+창을 800px보다 작게 줄이면 보더(선) 을 안보이게 하는동시에 #grid{display:block;}을 주어 두번째 블록인 P 태그를 아래로 내려오게 한다.
