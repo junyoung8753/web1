@@ -13,7 +13,7 @@ CSS의 특징
 핵심내용
 
 - html*정보. css*디자인
-- style{ }로 이제 부터 CSS언어 문법에 맞게 처리하자
+- <style>로 이제 부터 CSS언어 문법에 맞게 처리하자
 
 <!--
 <style>
@@ -40,10 +40,18 @@ HTML에 CSS를 적용하는 방법
 </style>
 
 3. 용어
-   선언,효과declaration : color:black; text-decoration:none;(=또한 속성property이기도 하다)
-   ;은 description 구분하기위해 사용
-   a{선언} : 선택자(selector)
 
+<style>
+- div {color: red; padding:5px;}
+
+  <style> : style태그  
+  div : 선택자 div태그
+  { } : 선언블록
+  color:red; : 선언,효과(declaration)
+  color : 속성
+  red : 속성값
+ * ( ; 는 description 구분하기위해 사용)
+ * 선택자(selector)는 { 가 나오기 전 전부를 선택자라 부른다.
 ---
 
 # CSS-6.CSS 속성을 스스로 알아내기
@@ -149,3 +157,18 @@ display:grid;
 grid-template-columns: 10px 1fr
 /style
 과 같이 사용한다.
+
+---
+
+# CSS-12.미디어 쿼리 소개
+
+- 미디어 쿼리: @media(min-width:800px) { }
+  최소 또는 최대 폭부터 { } 가 작동하게 해주는 태그
+
+- 예시
+  @media(min-width:800px) {div {display:none;}}
+
+800px 보다 크다면 { } 를 동작시킨다
+{ } 안에 div{} 가 있으므로 800px보다 클때 화면을 안보이게 만든다.
+min: ~~부터
+max: ~~까지
