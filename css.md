@@ -196,3 +196,16 @@ border-bottom: none;
 }
 }
 창을 800px보다 작게 줄이면 보더(선) 을 안보이게 하는동시에 #grid{display:block;}을 주어 두번째 블록인 P 태그를 아래로 내려오게 한다.
+
+---
+
+# CSS-14.CSS 코드의 재사용
+
+- link 태그 사용으로 여러페이지에 CSS 동시적용
+
+* 적용할 여러 페이지의 <head></head> 사이에 link 태그를 넣어주고
+  <style></style> 태그를 새 파일에 넣어버린다
+
+- 링크태그
+<link rel="stylesheet" href="style.css"> 
+(style.css 는 style 코드만 빼놓은 새파일 이름)
