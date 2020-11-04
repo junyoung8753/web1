@@ -52,18 +52,32 @@ JavaScript 프로퍼티를 이용하여 다양한 편의성기능을 사용한�
 
 - data type
 
+* 숫자number(1,2,3...)
 * 문자(a,b,c...#,\$...)
-* 숫자(1,2,3...)
-* 문자열(hello,ohmygod,...)
+* 문자열string(hello,ohmygod,...)
 
 - javascript string(문자열) 프로퍼티
 
-* .toUpperCase 대문자로 바꿔줌
-* .indexOf 몇번째에 찾는 문자가 있는지 알려줌
-* .trim() 공백 없애줌
+* string.toUpperCase() 대문자로 바꿔줌
+* string.indexOf('A') 몇번째에 찾는 문자(A)가 있는지 알려줌
+* string.trim() 공백 없애줌
+* string.length 문자수 (str.XXX는 string.xxx. 즉 문자열이란뜻)
 
-"1" 은 문자, 1 은 숫자
+"1" 은 문자, 1 은 숫자. 즉 "" '' 는 문자로 만들어준다.
 1+1 은 2, "1"+"1" 은 11이다
 그러나, html 에서는 타이핑한 문자가 그대로 나온다.
 
 # WEB2 JavaScript - 7.변수와 대입 연산자
+
+- 상수(constant): 항상"상" 인 수. 바뀌지 않는것 (ex: 1=1)
+- 변수(variable): 변할수 있는 수. 바뀔수 있는것 (ex: var name = 'junyoung')
+
+backgroundColor='black';
+backgroundColor(변수) =(대입연산자) 'black';(변수의 값)
+
+- 변수(variable)활용 예
+
+var name = 'junyoung'; (shift + Enter 누르면 검사를 유보하고 다음칸으로감)
+alert("Web browsers receive "+name+" HTML documents from a web server or from local storage and render the documents into multimedia web page aasdfafs "+name+" fsd sdfa "+name+"8753 HTMLdescribes the structure of a web page semantically and o "+name+" riginally included cues for the appearance of the document.")
+
+var name = 'junyoung'; 를 사용하면 "+name+" 에 junyoung을 쉽게 넣을수 있다.
