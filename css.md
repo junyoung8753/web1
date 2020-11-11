@@ -73,10 +73,12 @@ id(#grid) > class(.saw) > element(div)
 구체적 > 중간 > 포괄적 순서이다
 id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
 
+태그 이름이 saw 일때는 saw{ }이지만 class="saw"일때는 .saw 라고 쓰기로 약속되있다.
+
 -예시 코드
 
 <head>
-  <>
+  <style>
     div {
       color:black;
     }
@@ -86,7 +88,7 @@ id 는 문서에서 딱 한 번만 등장하는 유일무이한 선택자.
     .saw {
       color: gray
     }
-  </>
+  </style>
 </head>
 <body>
     <div href="1.html" class="saw">HTML</div>

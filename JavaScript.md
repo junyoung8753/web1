@@ -81,3 +81,70 @@ var name = 'junyoung'; (shift + Enter 누르면 검사를 유보하고 다음칸
 alert("Web browsers receive "+name+" HTML documents from a web server or from local storage and render the documents into multimedia web page aasdfafs "+name+" fsd sdfa "+name+"8753 HTMLdescribes the structure of a web page semantically and o "+name+" riginally included cues for the appearance of the document.")
 
 var name = 'junyoung'; 를 사용하면 "+name+" 에 junyoung을 쉽게 넣을수 있다.
+
+# WEB2 JavaScript - 8.웹브라우저 제어
+
+<body style="background-color:black;color:white;">는 "HTML"의 body에 "CSS" style태그를 넣어 사용한것이다.
+HTML은 한번 수정하면 바뀌지 않는 정적인 언어이고 CSS는 디자인의 역활을한다.
+이제 JavaScript를 사용하여 내 행동에 따라 반응하게 만들 수 있는 방법중 하나인 웹브라우저 제어에 대하여 배운다.
+
+# WEB2 JavaScript - 9. CSS 기초 : style 속성
+
+CSS 복습.
+
+<h2 style="background-color:coral;color:powderblue">JavaScript</h2>
+
+html에 CSS의 style태그라는 문법을 적용.
+color, background-color은 CSS의 속성(property)
+
+# WEB2 JavaScript - 10.CSS 기초 (style 태그)
+
+<style></style>는 태그 사이에 들어있는 것이 CSS라는것을 알려주는 구분자.
+
+div(<>) > class(.) > id(#)  
+div가 제일 포괄적. 동시에 class와 id가 같이 쓰였을때 id가 더 구체적이기에 우선적용됨.
+
+<style>
+    div {
+    }
+    .apple{
+    }
+    #banana{
+    }
+</style>
+<body>
+<div class="apple" id="banana">hello</div>
+</body>
+
+# WEB2 JavaScript - 11.CSS 기초 : 선택자
+
+div(<>) class(.) id(#) 는 선택자.
+div가 먼저 적용되고 class를 적용한후 id를 적용한다. 즉 id가 마지막에 적용됨으로
+동시에 사용되었을때 id의 속성값이 적용된다.
+
+# WEB2 JavaScript - 12.제어할 태그 선택하기
+
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';
+">
+<input type="button" value="day" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';
+">
+
+Javascript select tag by css selector
+
+---- 이해 다 안됨. 일단 넘어감------
+
+# WEB2 JavaScript - 13.프로그램,프로그래밍,프로그래머
+
+PROGRAM 은 순서라는 의미가 들어있다
+순서를 만드는것을 PROGRAMMING 이라하고
+순서를 만드는 사람을 PROGRAMMER 라고 한다.
+
+순서에 '패턴'이 발생한다면 굳이, 계속, 일일이 반복할 이유가 사라진다. 실증난다.
+그래서 프로그램을 짜고 그에 걸맞는 언어를 만들어냈다.
+
+HTML은 웹페이지를 묘사하는 목적의 언어이기에 시간의 순서에 따라 진행되지 않는다.
+JavaScript는 시간의 순서에 따라 실행되기에 프로그래밍 언어라 볼수 있다.
