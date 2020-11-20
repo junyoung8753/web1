@@ -4,34 +4,54 @@
 <title>WEB1 -JavaScript</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+<script>
+function setColor(color){
+  var alist = document.querySelectorAll('a');
+var i= 0;
+while(i < alist.length){
+alist[i].style.color='color';
+i=i+1;
+}
+}
+function nightDayHandler(self){
+  var target = document.querySelector('body');
+if(self.value === 'night'){
+target.style.backgroundColor = 'black';
+target.style.color = 'white';
+self.value = 'day'
 
+var alist = document.querySelectorAll('a');
+var i= 0;
+while(i < alist.length){
+alist[i].style.color='powderblue';
+i=i+1;
+}
+
+} else {
+target.style.backgroundColor = 'white';
+target.style.color = 'black';
+self.value = 'night';
+
+
+
+var alist = document.querySelectorAll('a');
+var i= 0;
+while(i < alist.length){
+alist[i].style.color='blue';
+i=i+1;
+}
+}
+}
+</script>
 </head>
+
 <body>
 <h1><a href="index.html">WEB</a></h1>
+
+
 <input type="button" value="night" onclick="
-document.querySelector('body').style.backgroundColor = 'black';
-document.querySelector('body').style.color = 'white';
+ nightDayHandler(this);
 ">
-<input type="button" value="day" onclick="
-document.querySelector('body').style.backgroundColor = 'white';
-document.querySelector('body').style.color = 'black';
-">
-
-
-
-
-
-<!--
-<input type="button" value="night" onclick="
-document.querySelector('body').style.backgroundColor ='black';
-document.querySelector('body').style.color='white';
-">
-<input type="button" value="day" onclick="
-document.querySelector('body').style.backgroundColor='white';
-document.querySelector('body').style.color='black';
-">
--->
-
 
 <id="grid">
   <ol>
@@ -46,6 +66,7 @@ document.querySelector('body').style.color='black';
 
     Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it.
   </p>
+
 </div>
 </id=>
 </body>
