@@ -1,3 +1,38 @@
+JavaScript
+
+2.수업의 목적
+
+3.HTML과 JS의 만남 : script 태그
+4.HTML과 JS의 만남 : 이벤트
+5.HTML과 JS의 만남 (콘솔)
+
+6.데이터타입 - 문자열과 숫자
+
+7.변수와 대입 연산자
+
+8.웹브라우저 제어
+
+9.CSS 기초 : style 속성
+10.CSS 기초 : style 태그
+11.CSS 기초 : 선택자
+
+12.제어할 태그 선택하기
+
+13.프로그램,프로그래밍,프로그래머
+
+14.조건문 예고 15.비교 연산자와 블리언 16.조건문 17.조건문의 활용
+
+18.리팩토링 중복의 제거
+
+19.반복문 예고 20.배열 21.반복문 22.배열과 반복문 23.배열과 반복문의 활용
+
+24.함수예고 25.함수 26.함수 : 매개변수와 인자 27.함수 (리턴) 28.함수의 활용
+
+29.객체 예고 30.객체 쓰기와 읽기 31.객체와 반복문 32.객체프로퍼티와 메소드 33.객체의 활용
+
+34.파일로 쪼개서 정리 정돈하기 35.라이브러리와 프레임워크
+36.UI vs API 37.수업을 마치며
+
 # WEB2 JavaScript - 1.수업소개
 
 # WEB2 JavaScript - 2.수업의 목적
@@ -283,6 +318,10 @@ Syntax : 구문
 
 # WEB2 JavaScript - 22.배열과 반복문
 
+배열: 정보를 담는 그릇이면서 정보를 순서대로 담는 특징이 있다.
+객채: 이름이 있는 정리정돈 상자. ex) BodySetColor , NightDayHandler 같은걸 객체라 한다
+배열은 대가로[] 객체는 중가로{}
+
 <script>
   var coworkers = ["egoing", "leezhe", "duru", "taeho"];
 </script>
@@ -362,7 +401,8 @@ Return함수 사용예시
     document.write('<div style="font-size:3rem";>'+sum2(2,3)+'</div>');
 </script>
 
-document.write대신 return을 쓰는이유
+document.write대신 return함수를 쓰는이유
+
 <script>
     function sum(left, right){
       document.write(left+right+'<br>');
@@ -372,7 +412,7 @@ document.write대신 return을 쓰는이유
 
 위의 sum(2,3)는 document.write(2+3+'<br>') 이다.
 document.write(sum(2,3));는 document.write(document.write(2+3+'<br>'));이다.
-이럴때 return 함수를 사용함으로서 
+이럴때 return 함수를 사용함으로서
 document.write('<div style="color:red">'+sum2(2,3)+'</div>'); 와 같은 식을 사용할 수 있게된다.
 즉 다양한 맥락에서 활용할수 있는 자유도가 생긴다.
 
@@ -382,3 +422,132 @@ document.write('<div style="color:red">'+sum2(2,3)+'</div>'); 와 같은 식을 
 
 # WEB2 JavaScript - 29.객체 예고
 
+객체: 수납상자와 비슷. 정보를 담는그릇에 나중에 꺼낼수 있게 순서는 상관없이 이름을 붙여서 담는다.
+즉, 이름이 있는 정리정돈 상자. ex) BodySetColor , NightDayHandler 같은걸 객체라 한다.
+
+- 배열은 대가로[] 객체는 중가로{}
+
+<script>
+function BodySetColor(color) {    // function,만든이름,담을기능의 
+  document.querySelector("body").style.color = color; // 쿼리셀렉터, 위치, 
+}
+function BodySetBackgroundColor(color) {
+  document.querySelector("body").style.backgroundColor= color; 
+}
+function nightDayHandler(self) {
+  var target = document.querySelector("body");
+  if (self.value === "night") {
+    Body.setBackgroundColor("black")
+    Body.setColor("white");
+    self.value = "day";
+    LinksSetColor("powderblue");
+  } else {
+    Body.setBackgroundColor("white");
+    Body.setColor("black");
+    self.value = "night";
+    LinksSetColor("blue");
+  }
+}
+</script>
+
+- 객체에 속해있는 함수는 메소드라고한다.
+- function에 이름과 기능을 담은후 기능이 필요할때 이름만 써서 사용하기 편하게 만든것이 함수.
+
+# WEB2 JavaScript - 30.객체 쓰기와 읽기
+
+31.객체와 반복문 에 포함.
+
+# WEB2 JavaScript - 31.객체와 반복문
+
+객체: Object
+
+<script>
+  var coworkers = {
+    //coworkers 라는 변수 객체에
+    programmer: "egoing", // egoing이란 정보를 programmer이란 key에 저장한다는 뜻
+    designer: "leezche",
+    };
+
+  document.write("programmer: " + coworkers.programmer + "<br>");
+  document.write("designer : " + coworkers.designer + "<br>");
+  coworkers.bookkeeper = "duru";// coworkers객체에 bookkeeper 이란 정보를 나중에 추가 하고싶을때 
+  document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+  coworkers["data scientist"] = "taeho";
+  document.write("data scientist : " + coworkers["data scientist"] + "<br>");
+  // data scientist에 띄어쓰기가 있어서 []를 사용해 동일효과 구현.(배열은[]대가로)
+  // ex) coworkers.programmer = coworkers[programmer]
+
+ //반복문 for(var key in 내object)를 사용했다.
+    for(var key in coworkers) {    //coworkers안에 있는 변수 key를 사용하여,
+        document.write(key+'<br>'); // 작성하라, (key)를.
+    }
+    for(var key in coworkers) {
+        document.write(coworkers[key]+'<br>');
+    }
+    for(var key in coworkers) {
+        document.write(key +':'+ coworkers[key]+'<br>');
+    }
+</script>
+
+# WEB2 JavaScript - 32.객체프로퍼티와 메소드
+
+- 객체에 소속된 함수 : method
+- 객체에 소속된 변수: property ex) programmer : "egoing" (둘다 변수.즉 property)
+<script>
+        var showAll = function(){ };  // 이것과
+        function showAll(){ };  //       이것은 똑같은 표현이다.
+</script>
+
+<script>
+   coworkers.showAll = function () {
+     for (var key in this) {
+       document.write(key + " : " + this[key] + "<br>");
+     }
+   }
+   coworkers.showAll();
+    객체       함수            객체에 소속된 함수이기에 shoAlll은 method이다.
+</script>
+
+# WEB2 JavaScript - 33.객체의 활용
+
+함수는 코드가 많아지면 사용하는 정리정돈 도구.
+객체는 함수와 변수가 많아지면 그룹핑해서 사용하는 정리정돈 도구.
+객체가 많아지면 ....
+코드<함수<객체<......
+
+# WEB2 JavaScript - 34.파일로 쪼개서 정리 정돈하기
+
+<head>
+    <link rel="stylesheet" href="style.css" />  //css태그를 style.css파일에 담음
+    <script src="colors.js"></script>   //script 태그를 colors.js파일에 담음.
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button"value="night"onclick="
+  nightDayHandler(this);"/>  // nightDayHandler는 버튼을 클릭했을때를 위해 만든 만든 객체.
+</body>
+
+# WEB2 JavaScript - 35.라이브러리와 프레임워크
+
+라이브러리는 작은것들을 가져다 쓰는느낌
+프레임워크는 뼈대 큰것을 세우고 하는 느낌
+
+jquery사용하는법.
+cdn, download 등으로 사용할수있는다.
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>등과같은
+
+jquery를 복사해와서 html파일에 넣고 사용법을 보고 필요부분에 코드를 넣는다.
+
+ex) \$("a").css('color',color);
+
+# WEB2 JavaScript - 36.UI vs API
+
+인터페이스 : 두 시스템간의 상호작용 형식
+UI : 유저 인터페이스, 사용자와 컴퓨터와의 상호작용 형식
+API : 응용프로그램 인터페이스, 응용프로그램과 컴퓨터,운영체제와의 상호작용 형식
+
+"UI는 사용자가 시스템을 제어하기 위해 사용하는 조작 장치이고,
+그 조작 장치를 만들려면 API를 가져와서 만들 수 있다"
+
+# WEB2 JavaScript - 37.수업을 마치며
